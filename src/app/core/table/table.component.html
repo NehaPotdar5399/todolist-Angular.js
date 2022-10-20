@@ -1,0 +1,144 @@
+<div class="card">
+  <form [formGroup]="userForm">
+    <div class="mt-5">
+      <div class="form-row">
+        
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="task">Task:</label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input
+                  type="text"
+                  formControlName="task"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="task">Start Date:</label>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <input
+                    type="date"
+                    formControlName="start_date"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="task">End_Date:</label>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      type="date"
+                      formControlName="end_date"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="task">Status:</label>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                      <input
+                        type="text"
+                        formControlName="status"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="task">Priority:</label>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <input
+                              type="text"
+                              formControlName="priority"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="task">Progress:</label>
+                          </div>
+                          <div class="form-row">
+                            <div class="col">
+                              <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                formControlName="progress"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-row mt-4">
+                          <div class="col-md-6">
+                            <button type="button" class="btn btn-primary" (click)="addItem()">
+                              Add</button
+                            >&nbsp;
+                            <button type="button" class="btn btn-primary" (click)="reset()">
+                              Reset
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-8 mt-4 mb-4">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Task:</th>
+                        <th>Start_Date:</th>
+                        <th>End_Date:</th>
+                        <th>Status:</th>
+                        <th>Priority:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listData">
+
+                            <td><span>{{item.task}}</span></td>
+                            <td><span>{{item.start_date}}</span></td>
+                            <td><span>{{item.end_date}}</span></td>
+                            <td><span>{{item.status}}</span></td>
+                            <td><span>{{item.priority}}</span></td>
+
+                        </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

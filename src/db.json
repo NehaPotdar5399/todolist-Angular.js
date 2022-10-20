@@ -1,0 +1,23 @@
+{
+
+    "login":[{
+        "username":"neharpotdar68@gmail.com",
+        "password":"neha@990503"
+    }],
+    "tasks":[
+        {
+            "task":"Assignment",
+            "start_date":"09/08/2022",
+            "end_date":"12/08/2022",
+            "status":"In Progress",
+            "priority":1
+        },
+        {
+            "task":"Project report",
+            "start_date":"10/10/2022",
+            "end_date":"12/10/2022",
+            "status":"Completed",
+            "priority":3
+        }
+    ]
+}
